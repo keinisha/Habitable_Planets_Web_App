@@ -4,7 +4,7 @@ import pickle
 import math
 
 with open('xgboost.pkl', 'rb') as f:
-    xgboost1 = pickle.load(f)
+    xgboost = pickle.load(f)
 
 def predicthab(input_data):
     innp = np.asarray(input_data)
