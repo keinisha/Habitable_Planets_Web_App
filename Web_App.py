@@ -2,6 +2,7 @@ import numpy as np
 import streamlit as st
 import pickle
 import math
+import xgboost
 
 with open('xgboost.pickle', 'rb') as f:
     xgboost = pickle.load(f)
