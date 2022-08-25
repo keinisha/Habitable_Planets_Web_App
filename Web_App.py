@@ -2,15 +2,14 @@ import numpy as np
 import streamlit as st
 import pickle
 import math
-import xgboost
 
 with open('xgboost.pickle', 'rb') as f:
-    xgboost = pickle.load(f)
+    x = pickle.load(f)
 
 def predicthab(input_data):
     innp = np.asarray(input_data)
     resha = innp.reshape(1, -1)
-    prediction = xgboost.predict(resha)
+    prediction = x.predict(resha)
     print(prediction)
 
     if prediction[0] == 0:
