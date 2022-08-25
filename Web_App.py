@@ -3,7 +3,7 @@ import streamlit as st
 import pickle
 import math
 
-with open('xgboost.pkl', 'rb') as f:
+with open('xgboost.pickle', 'rb') as f:
     xgboost = pickle.load(f)
 
 def predicthab(input_data):
