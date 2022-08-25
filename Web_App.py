@@ -3,8 +3,8 @@ import streamlit as st
 import pickle
 import math
 
-pickle_in = open('xgboost.pickle','rb')
-xgboost = pickle.load(pickle_in)
+with open('xgboost.pkl', 'rb') as f:
+    xgboost1 = pickle.load(f)
 
 def predicthab(input_data):
     innp = np.asarray(input_data)
