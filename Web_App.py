@@ -4,12 +4,12 @@ import pickle
 import math
 
 with open('xgboost.pickle', 'rb') as f:
-    x = pickle.load(f)
+    xgboost = pickle.load(f)
 
 def predicthab(input_data):
     innp = np.asarray(input_data)
     resha = innp.reshape(1, -1)
-    prediction = x.predict(resha)
+    prediction = xgboost.predict(resha)
     print(prediction)
 
     if prediction[0] == 0:
